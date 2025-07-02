@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyas Bhagwat | Skills</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #f9fbfd;
+            color: #2d3748;
+        }
+
+        .skill-item {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .skill-item:hover {
+            color: #3182ce;
+            text-shadow: 0 0 5px rgba(49, 130, 206, 0.2);
+        }
+
+        .skill-item:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 100%;
+            background: #2d3748;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            z-index: 10;
+            margin-bottom: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1.2em;
+            background-color: #3182ce;
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+            margin-left: 2px;
+        }
+
+        @keyframes blink {
+
+            from,
+            to {
+                opacity: 1
+            }
+
+            50% {
+                opacity: 0
+            }
+        }
+
+        .section {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1
+            }
+        }
+
+        .section:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .section:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .section:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen p-6 md:p-10 lg:p-16">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="mb-10">
+            <div class="flex items-center">
+                <span class="text-blue-500 font-bold mr-2">JARVIS</span>
+                <span class="text-gray-500 mr-2">></span>
+                <span class="font-bold">SKILLS</span>
+            </div>
+            <div class="h-1 w-full bg-gradient-to-r from-blue-400 to-blue-200 mt-2"></div>
+        </div>
+
+        <!-- Skills Sections -->
+        <div class="space-y-8">
+            <!-- Worked With -->
+            <div class="section">
+                <div class="flex items-center mb-4">
+                    <span class="text-gray-500 mr-2">></span>
+                    <span class="font-bold text-blue-600">Worked With:</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pl-6">
+                    <span class="skill-item" data-tooltip="Open-source ML framework">TensorFlow</span>
+                    <span class="skill-item" data-tooltip="High-level neural networks API">Keras</span>
+                    <span class="skill-item" data-tooltip="Python ML framework">PyTorch</span>
+                    <span class="skill-item" data-tooltip="Machine learning library for Python">Scikit-learn</span>
+                    <span class="skill-item" data-tooltip="Interactive computing environment">Jupyter Notebook</span>
+                    <span class="skill-item" data-tooltip="Subset of ML using neural networks">Deep Learning</span>
+                    <span class="skill-item"
+                        data-tooltip="Computing systems inspired by biological neural networks">Neural Networks</span>
+                    <span class="skill-item" data-tooltip="Python library for numerical computing">NumPy</span>
+                    <span class="skill-item" data-tooltip="Python data analysis and manipulation tool">Pandas</span>
+                    <span class="skill-item" data-tooltip="Python plotting library">Matplotlib</span>
+                    <span class="skill-item"
+                        data-tooltip="Python data visualization library based on matplotlib">Seaborn</span>
+                    <span class="skill-item" data-tooltip="HyperText Markup Language">HTML</span>
+                    <span class="skill-item" data-tooltip="Cascading Style Sheets">CSS</span>
+                    <span class="skill-item" data-tooltip="Official IDE for Android development">Android Studio</span>
+                </div>
+            </div>
+
+            <!-- Programming Languages -->
+            <div class="section">
+                <div class="flex items-center mb-4">
+                    <span class="text-gray-500 mr-2">></span>
+                    <span class="font-bold text-blue-600">Programming Languages:</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pl-6">
+                    <span class="skill-item" data-tooltip="Primary programming language">Python</span>
+                    <span class="skill-item" data-tooltip="Object-oriented language">Java</span>
+                    <span class="skill-item" data-tooltip="Hypertext Markup Language">HTML</span>
+                    <span class="skill-item" data-tooltip="Cascading Style Sheets">CSS</span>
+                    <span class="skill-item" data-tooltip="Extensible Markup Language">XML</span>
+                    <span class="skill-item"
+                        data-tooltip="Modern programming language for Android development">Kotlin</span>
+                </div>
+            </div>
+
+            <!-- Familiar With -->
+            <div class="section">
+                <div class="flex items-center mb-4">
+                    <span class="text-gray-500 mr-2">></span>
+                    <span class="font-bold text-blue-600">Familiar With:</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pl-6">
+                    <span class="skill-item" data-tooltip="Python GUI framework">PyQt5</span>
+                    <span class="skill-item" data-tooltip="Python GUI toolkit">Tkinter</span>
+                    <span class="skill-item" data-tooltip="Speech recognition library">SpeechRecognition</span>
+                    <span class="skill-item" data-tooltip="Google's mobile development platform">Firebase</span>
+                    <span class="skill-item" data-tooltip="Natural Language Processing">NLP</span>
+                    <span class="skill-item" data-tooltip="Large Language Models">LLMs</span>
+                    <span class="skill-item" data-tooltip="Communication between computing devices">Computer
+                        Networking</span>
+                    <span class="skill-item" data-tooltip="Microsoft's integrated development environment">Visual
+                        Studio</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Navigation Buttons -->
+        <div class="console-line mt-8 flex flex-wrap gap-3 justify-center">
+            <button onclick="window.location.href='index.html'"
+                class="px-4 py-2 bg-teal-100 hover:bg-teal-200 text-teal-800 rounded-md border border-teal-200 transition-all">
+                Summary
+            </button>
+            <button onclick="window.location.href='projects.html'"
+                class="px-4 py-2 bg-teal-100 hover:bg-teal-200 text-teal-800 rounded-md border border-teal-200 transition-all">
+                Projects
+            </button>
+            <button onclick="window.location.href='work-experience.html'"
+                class="px-4 py-2 bg-teal-100 hover:bg-teal-200 text-teal-800 rounded-md border border-teal-200 transition-all">
+                Work Experience
+            </button>
+            <button onclick="window.location.href='education.html'"
+                class="px-4 py-2 bg-teal-100 hover:bg-teal-200 text-teal-800 rounded-md border border-teal-200 transition-all">
+                Education
+            </button>
+            <button onclick="window.location.href='certifications.html'"
+                class="px-4 py-2 bg-teal-100 hover:bg-teal-200 text-teal-800 rounded-md border border-teal-200 transition-all">
+                Certifications
+            </button>
+        </div>
+
+        <!-- Terminal Cursor -->
+        <div class="mt-12 flex items-center">
+            <span class="text-gray-500 mr-2">></span>
+            <span class="cursor"></span>
+        </div>
+    </div>
+</body>
+
+</html>

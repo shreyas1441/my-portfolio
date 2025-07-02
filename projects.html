@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyas Bhagwat | Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap">
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #f7fafd;
+            color: #2d3748;
+        }
+
+        .console-header {
+            position: relative;
+        }
+
+        .console-header::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+            position: absolute;
+            right: -10px;
+            color: #4fd1c5;
+        }
+
+        .project-card {
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .project-card:hover {
+            border-left-color: #4fd1c5;
+            box-shadow: 0 4px 6px -1px rgba(79, 209, 197, 0.1), 0 2px 4px -1px rgba(79, 209, 197, 0.06);
+            transform: translateX(2px);
+        }
+
+        .project-title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .project-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #4fd1c5, #4299e1);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover .project-title::after {
+            transform: scaleX(1);
+        }
+
+        @keyframes blink {
+
+            from,
+            to {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .glow-text {
+            text-shadow: 0 0 5px rgba(79, 209, 197, 0.5);
+        }
+
+        .tag {
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="mb-12 text-center">
+            <h1 class="text-4xl font-bold mb-2 inline-block console-header glow-text text-gray-800">
+                > PROJECTS
+            </h1>
+            <p class="text-gray-500 mt-4">// Shreyas Bhagwat's technical portfolio</p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="space-y-8">
+            <!-- Project 1 -->
+            <div class="project-card bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-semibold mb-3 project-title text-gray-800">
+                    > OVARIAN CANCER MULTICLASS CLASSIFICATION
+                </h2>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>Built using <span class="font-medium text-blue-600">EfficientNet (94% accuracy)</span> and <span
+                            class="font-medium text-blue-600">DenseNet (90%)</span></li>
+                    <li>Optimized hyperparameters to improve generalization</li>
+                    <li class="flex flex-wrap gap-2 mt-3">
+                        <span class="tag px-3 py-1 rounded-full text-sm">Medical AI</span>
+                        <span class="tag px-3 py-1 rounded-full text-sm">Image Classification</span>
+                        <span class="tag px-3 py-1 rounded-full text-sm">Deep Learning</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-semibold mb-3 project-title text-gray-800">
+                    > SPEC TOUCH X - GESTURE DETECTION ON SPECTACLES
+                </h2>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>Used <span class="font-medium text-blue-600">CNN for touch and pinch detection</span> on spec
+                        surfaces</li>
+                    <li>Achieved <span class="font-medium text-blue-600">95.34% validation accuracy</span></li>
+                    <li class="flex flex-wrap gap-2 mt-3">
+                        <span class="tag px-3 py-1 rounded-full text-sm">Computer Vision</span>
+                        <span class="tag px-3 py-1 rounded-full text-sm">Gesture Control</span>
+                        <span class="tag px-3 py-1 rounded-full text-sm">Wearables</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-semibold mb-3 project-title text-gray-800">
+                    > SUPERB ARTIFICIAL INTELLIGENCE (AI)
+                </h2>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>Entry for <span class="font-medium text-blue-600">Gemini API Developer Competition</span></li>
+                    <li>Features: <span class="font-medium text-blue-600">Smart Vision</span>, Floating Voice Buttons,
+                        Automation</li>
+                    <li class="flex flex-wrap gap-2 mt-3">
+                        <span class="tag px-3 py-1 rounded-full text-sm">Generative AI</span>
+                        <span class="tag px-3 py-1 rounded-full text-sm">Productivity Tools</span>
+                        <span class="tag px-3 py-1 rounded-full text-sm">Screen Intelligence</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card bg-white p-6 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-semibold mb-3 project-title text-gray-800">
+                    > KEY BYTES BY VIVA – ANDROID APP (LIVE ON PLAYSTORE)
+                </h2>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li><span class="font-medium text-blue-600">Voice + Text virtual assistant</span> integrated into
+                        keyboard</li>
+                    <li>Multiple features accessible without switching apps</li>
+                    <li class="flex flex-wrap gap-2 mt-3">
+                        <span class="tag px-3 py-1 rounded-full text-sm">Android</span>
+                        <span class="tag px-3 py-1 rounded-full text-sm">AI Assistant</span>
+                        <span class="tag px-3 py-1 rounded-full text-sm">Accessibility</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <!-- Navigation Buttons -->
+        <div class="console-line mt-8 flex flex-wrap gap-3 justify-center">
+            <button onclick="window.location.href='index.html'"
+                class="px-4 py-2 bg-teal-100 hover:bg-teal-200 text-teal-800 rounded-md border border-teal-200 transition-all">
+                Summary
+            </button>
+            <button onclick="window.location.href='work-experience.html'"
+                class="px-4 py-2 bg-teal-100 hover:bg-teal-200 text-teal-800 rounded-md border border-teal-200 transition-all">
+                Work Experience
+            </button>
+            <button onclick="window.location.href='education.html'"
+                class="px-4 py-2 bg-teal-100 hover:bg-teal-200 text-teal-800 rounded-md border border-teal-200 transition-all">
+                Education
+            </button>
+            <button onclick="window.location.href='skills.html'"
+                class="px-4 py-2 bg-teal-100 hover:bg-teal-200 text-teal-800 rounded-md border border-teal-200 transition-all">
+                Skills
+            </button>
+            <button onclick="window.location.href='certifications.html'"
+                class="px-4 py-2 bg-teal-100 hover:bg-teal-200 text-teal-800 rounded-md border border-teal-200 transition-all">
+                Certifications
+            </button>
+        </div>
+
+        <!-- Footer Note -->
+        <div class="mt-16 text-center text-gray-400 text-sm">
+            <p>// Last updated: {current_date}</p>
+            <p class="mt-1">>_ Keep building</p>
+        </div>
+    </div>
+
+    <script>
+        // Add current date to footer
+        document.addEventListener('DOMContentLoaded', function () {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const currentDate = new Date().toLocaleDateString('en-US', options);
+            document.querySelectorAll('{current_date}').forEach(el => {
+                el.textContent = currentDate;
+            });
+
+            // Optional: Add typing animation to project titles
+            const projectTitles = document.querySelectorAll('.project-title');
+            projectTitles.forEach(title => {
+                const originalText = title.textContent;
+                title.textContent = '';
+
+                let i = 0;
+                const typing = setInterval(() => {
+                    title.textContent += originalText[i];
+                    i++;
+                    if (i >= originalText.length) clearInterval(typing);
+                }, 30);
+            });
+        });
+    </script>
+</body>
+
+</html>

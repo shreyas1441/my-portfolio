@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyas Bhagwat - Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap">
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #f8fbfe;
+            color: #333;
+        }
+
+        .terminal-block {
+            border-left: 4px solid #3b82f6;
+            transition: all 0.3s ease;
+        }
+
+        .terminal-block:hover {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transform: translateY(-2px);
+        }
+
+        .institution {
+            color: #3b82f6;
+            text-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
+        }
+
+        .degree {
+            color: #10b981;
+            text-shadow: 0 0 5px rgba(16, 185, 129, 0.3);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: #3b82f6;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen p-6 md:p-10 lg:p-16">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">
+                > EDUCATION
+                <span class="cursor"></span>
+            </h1>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Education Entries -->
+        <div class="space-y-8">
+            <!-- Bachelor's Degree -->
+            <div class="terminal-block bg-white p-6 rounded-lg">
+                <div class="flex items-start">
+                    <span class="text-blue-500 mr-2">></span>
+                    <div class="flex-1">
+                        <h2 class="degree text-xl font-bold mb-3">BACHELOR'S DEGREE IN ELECTRONICS AND TELECOMMUNICATION
+                        </h2>
+                        <div class="pl-4 space-y-2">
+                            <p><span class="font-semibold">Institution:</span> <span class="institution">Smt. Kashibai
+                                    Navale College of Engineering, Pune</span></p>
+                            <p><span class="font-semibold">Year:</span> 2025</p>
+                            <p><span class="font-semibold">CGPA:</span> 7.7</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diploma -->
+            <div class="terminal-block bg-white p-6 rounded-lg">
+                <div class="flex items-start">
+                    <span class="text-blue-500 mr-2">></span>
+                    <div class="flex-1">
+                        <h2 class="degree text-xl font-bold mb-3">DIPLOMA IN ELECTRONICS AND TELECOMMUNICATION</h2>
+                        <div class="pl-4 space-y-2">
+                            <p><span class="font-semibold">Institution:</span> <span class="institution">New
+                                    Polytechnic, Kolhapur</span></p>
+                            <p><span class="font-semibold">Year:</span> 2022</p>
+                            <p><span class="font-semibold">Percentage:</span> 91.12%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Navigation Buttons -->
+        <div class="console-line mt-8 flex flex-wrap gap-3 justify-center">
+            <button onclick="window.location.href='index.html'"
+                class="px-4 py-2 bg-teal-100 hover:bg-teal-200 text-teal-800 rounded-md border border-teal-200 transition-all">
+                Summary
+            </button>
+            <button onclick="window.location.href='projects.html'"
+                class="px-4 py-2 bg-teal-100 hover:bg-teal-200 text-teal-800 rounded-md border border-teal-200 transition-all">
+                Projects
+            </button>
+            <button onclick="window.location.href='work-experience.html'"
+                class="px-4 py-2 bg-teal-100 hover:bg-teal-200 text-teal-800 rounded-md border border-teal-200 transition-all">
+                Work Experience
+            </button>
+            <button onclick="window.location.href='skills.html'"
+                class="px-4 py-2 bg-teal-100 hover:bg-teal-200 text-teal-800 rounded-md border border-teal-200 transition-all">
+                Skills
+            </button>
+            <button onclick="window.location.href='certifications.html'"
+                class="px-4 py-2 bg-teal-100 hover:bg-teal-200 text-teal-800 rounded-md border border-teal-200 transition-all">
+                Certifications
+            </button>
+        </div>
+
+        <!-- Footer Note -->
+        <div class="mt-16 text-center text-sm text-gray-500">
+            <p>Shreyas Bhagwat © 2023 - Education Records</p>
+        </div>
+    </div>
+
+    <script>
+        // Add some subtle interactive elements
+        document.querySelectorAll('.terminal-block').forEach(block => {
+            block.addEventListener('mouseenter', () => {
+                const arrow = block.querySelector('span.text-blue-500');
+                arrow.textContent = '>>';
+            });
+            block.addEventListener('mouseleave', () => {
+                const arrow = block.querySelector('span.text-blue-500');
+                arrow.textContent = '>';
+            });
+        });
+    </script>
+</body>
+
+</html>
