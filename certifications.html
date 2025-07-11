@@ -279,16 +279,15 @@
                 let title = '';
                 
                 if (certId === 'cert1') {
-                    pdfUrl = 'https://raw.githubusercontent.com/shreyas1441/my-portfolio/main/Udemy%20AIML%20Certificate%20(1).pdf';
+                    pdfUrl = 'https://docs.google.com/viewer?url=https://github.com/shreyas1441/my-portfolio/raw/main/Udemy%20AIML%20Certificate%20(1).pdf&embedded=true';
                     title = 'AI, Machine Learning, and Data Science Certificate';
                 } else if (certId === 'cert2') {
-                    pdfUrl = 'https://raw.githubusercontent.com/shreyas1441/my-portfolio/main/Android%20Certificate.pdf';
+                    pdfUrl = 'https://docs.google.com/viewer?url=https://github.com/shreyas1441/my-portfolio/raw/main/Android%20Certificate.pdf&embedded=true';
                     title = 'Android App Development Certificate';
                 }
                 
-                // In a real implementation, you would use actual PDF URLs
-                // For demo purposes, we'll use a sample PDF
-                pdfViewer.src = 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf';
+                // Use Google Docs viewer for preview
+                pdfViewer.src = pdfUrl;
                 modalTitle.textContent = title;
                 
                 modal.classList.remove('hidden');
